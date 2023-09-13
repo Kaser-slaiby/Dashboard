@@ -4,6 +4,9 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+// import { UserProfileComponent } from './user-profile/user-profile.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 const routes: Routes =[
   {
@@ -17,7 +20,10 @@ const routes: Routes =[
       path: '',
       loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
     }]
-  }
+  },
+  // {
+  //   path: '', component:UserProfileComponent
+  // }
 ];
 
 @NgModule({
@@ -25,10 +31,15 @@ const routes: Routes =[
     CommonModule,
     BrowserModule,
     RouterModule.forRoot(routes,{
-       useHash: true
-    })
+       useHash: true,
+    }),
+    // RouterModule.forRoot(),
+    HttpClientModule
   ],
   exports: [
   ],
+  declarations: [
+  // UserProfileComponent  
+  ]
 })
 export class AppRoutingModule { }

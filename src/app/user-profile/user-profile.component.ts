@@ -1,3 +1,4 @@
+import { DataService } from './../../service/data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-
-  constructor() { }
+  users:any;
+  constructor(private dataService:DataService) { }
 
   ngOnInit() {
+   this.getUsersData();
+  }
+
+  getUsersData() {
+    this.dataService.getData().subscribe(res => {
+      this.users = res;
+    })
+
   }
 
 }

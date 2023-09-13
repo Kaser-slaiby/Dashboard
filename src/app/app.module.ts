@@ -2,12 +2,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
+  const appRoutes: Routes = [
+  {
+    path: '', component:UserProfileComponent
+  }
+];
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -17,6 +23,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
+    RouterModule.forRoot(appRoutes)  
   ],
   declarations: [
     AppComponent,
