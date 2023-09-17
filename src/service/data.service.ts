@@ -11,4 +11,9 @@ export class DataService {
     return this.httpClient.get('https://jsonplaceholder.typicode.com/users');
   
   }
+
+  // getLogin() {
+  //   return this.httpClient.get('');
+  
+  // }
 }

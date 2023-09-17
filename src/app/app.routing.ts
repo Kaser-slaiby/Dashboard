@@ -1,3 +1,4 @@
+import { LoginComponent } from './components/login/login.component';
 import { NgModule } from '@angular/core';
 import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
@@ -9,11 +10,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes =[
+   {
+    path: 'login', component:LoginComponent
+  },
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'login',
     pathMatch: 'full',
-  }, {
+  },
+   {
     path: '',
     component: AdminLayoutComponent,
     children: [{
@@ -30,6 +35,7 @@ const routes: Routes =[
   imports: [
     CommonModule,
     BrowserModule,
+    ///forRoot(//path app)
     RouterModule.forRoot(routes,{
        useHash: true,
     }),
