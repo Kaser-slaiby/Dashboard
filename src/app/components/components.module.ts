@@ -8,6 +8,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
+import { RequestResetComponent } from './password/request-reset/request-reset.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { ProfileComponent } from './profile/profile.component';
     SidebarComponent,
     LoginComponent,
     SignupComponent,
-    ProfileComponent
+    ProfileComponent,
+    RequestResetComponent
   ],
   exports: [
     FooterComponent,
