@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RequestResetComponent } from './password/request-reset/request-reset.component';
+import { ResponseResetComponent } from './password/response-reset/response-reset.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { RequestResetComponent } from './password/request-reset/request-reset.co
     LoginComponent,
     SignupComponent,
     ProfileComponent,
-    RequestResetComponent
+    RequestResetComponent,
+    ResponseResetComponent
   ],
   exports: [
     FooterComponent,
