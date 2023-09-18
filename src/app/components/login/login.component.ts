@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { AuthService } from 'app/Services/auth.service';
 import { data } from 'jquery';
 
 @Component({
@@ -10,7 +10,7 @@ import { data } from 'jquery';
 })
 export class LoginComponent {
 
-  constructor(private http: HttpClient,) {
+  constructor(private Auth: AuthService) {
 
   }
 
@@ -19,7 +19,7 @@ export class LoginComponent {
 
 
   onSubmit() {
-    return this.http.post('http://kaser.sy/api/login', this.form).subscribe(
+    this.Auth.login(this.form).subscribe(
       data => console.log(data),
       // error => this.handleError(error)
     )
