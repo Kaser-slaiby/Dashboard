@@ -15,6 +15,9 @@
                 <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
                   <p>Please login to your account</p>
 
+                  <div class="alert alert-danger" [hidden]="!error">
+                    {{error}}
+                  </div>
                   <div class="form-outline mb-4">
                     <input type="email" name="email" id="form2Example11" class="form-control" [(ngModel)]="form.email"
                       required />
