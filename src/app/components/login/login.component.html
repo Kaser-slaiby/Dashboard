@@ -13,7 +13,7 @@
                     <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
                   </div>
   
-                  <form>
+                  <form #logunForm="ngForm" (ngsubmit)="onSubmit()">
                     <p>Please login to your account</p>
   
                     <div class="form-outline mb-4">
@@ -28,7 +28,7 @@
                     </div>
   
                     <div class="text-center pt-1 mb-5 pb-1">
-                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 card-header card-header-danger" type="button">Log
+                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
                         in</button>
                       <a class="text-muted" href="#!">Forgot password?</a>
                     </div>
