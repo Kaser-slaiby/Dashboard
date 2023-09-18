@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { readdir } from 'fs';
 import { data } from 'jquery';
 
 @Component({
@@ -19,7 +18,7 @@ export class LoginComponent {
 
   onSubmit() {
     return this.http.post('http://kaser.sy/api/login', this.form).subscribe(
-
+      data => console.log(data),
       // error => this.handleError(error)
     )
   }
