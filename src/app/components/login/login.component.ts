@@ -11,5 +11,9 @@ export class LoginComponent {
 
   }
   
+  public form = {
+    email: null,
+    password: null
+  }
 
 }
