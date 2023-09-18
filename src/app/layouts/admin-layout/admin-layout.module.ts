@@ -6,17 +6,17 @@ import { AdminLayoutRoutes } from './admin-layout.routing';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 import { TableListComponent } from '../../table-list/table-list.component';
-import { TypographyComponent } from '../../typography/typography.component';
+import { CustomersComponent } from '../../management/customers.component';
 import { IconsComponent } from '../../icons/icons.component';
 import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
-import {MatLegacyButtonModule as MatButtonModule} from '@angular/material/legacy-button';
-import {MatLegacyInputModule as MatInputModule} from '@angular/material/legacy-input';
-import {MatRippleModule} from '@angular/material/core';
-import {MatLegacyFormFieldModule as MatFormFieldModule} from '@angular/material/legacy-form-field';
-import {MatLegacyTooltipModule as MatTooltipModule} from '@angular/material/legacy-tooltip';
-import {MatLegacySelectModule as MatSelectModule} from '@angular/material/legacy-select';
+import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
+import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
+import { MatRippleModule } from '@angular/material/core';
+import { MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
+import { MatLegacyTooltipModule as MatTooltipModule } from '@angular/material/legacy-tooltip';
+import { MatLegacySelectModule as MatSelectModule } from '@angular/material/legacy-select';
 
 @NgModule({
   imports: [
@@ -35,7 +35,7 @@ import {MatLegacySelectModule as MatSelectModule} from '@angular/material/legacy
     DashboardComponent,
     UserProfileComponent,
     TableListComponent,
-    TypographyComponent,
+    CustomersComponent,
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
@@ -43,4 +43,4 @@ import {MatLegacySelectModule as MatSelectModule} from '@angular/material/legacy
   ]
 })
 
-export class AdminLayoutModule {}
+export class AdminLayoutModule { }

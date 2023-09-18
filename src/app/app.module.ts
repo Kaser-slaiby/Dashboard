@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthService } from './Services/auth.service';
 import { SignupComponent } from './components/signup/signup.component';
+import { TokenService } from './Services/token.service';
 // import { UserProfileComponent } from './user-profile/user-profile.component';
 const appRoutes: Routes = [
   {
@@ -38,7 +39,9 @@ const appRoutes: Routes = [
     AdminLayoutComponent,
 
   ],
-  providers: [AuthService],
+  providers: [AuthService,
+    TokenService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

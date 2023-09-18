@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'app/Services/auth.service';
+import { TokenService } from 'app/Services/token.service';
+// import { Router } from 'express';
 import { data } from 'jquery';
 
 @Component({
@@ -10,7 +13,11 @@ import { data } from 'jquery';
 })
 export class LoginComponent {
 
-  constructor(private Auth: AuthService) {
+  constructor(private Auth: AuthService,
+    private Token: TokenService,
+    private router: Router,
+    // private route: ActivatedRoute
+  ) {
 
   }
 
@@ -20,9 +27,15 @@ export class LoginComponent {
 
   onSubmit() {
     this.Auth.login(this.form).subscribe(
-      data => console.log(data),
+      data => this.handleResponse(data)
+      // data => console.log(data),
       // error => this.handleError(error)
     )
+  }
+
+  handleResponse(data) {
+    this.router.navigateByUrl('dashboard');
+    // this.Token.handle(data.access_token)
   }
 
   handleError() {
