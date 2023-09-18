@@ -8,12 +8,18 @@ import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { AuthService } from './Services/auth.service';
+import { SignupComponent } from './components/signup/signup.component';
 // import { UserProfileComponent } from './user-profile/user-profile.component';
-  const appRoutes: Routes = [
+const appRoutes: Routes = [
   {
-    path: '', component:LoginComponent,
+    path: 'login', component: LoginComponent,
     // path: 'user-profile', component:UserProfileComponent
 
+  },
+
+  {
+    path: 'signup', component: SignupComponent
   }
 ];
 @NgModule({
@@ -32,7 +38,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     AdminLayoutComponent,
 
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
