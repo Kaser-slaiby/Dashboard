@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class LoginComponent {
 
   onSubmit() {
-
+    console.log(this.form);
   }
-  
+
   public form = {
     email: null,
     password: null

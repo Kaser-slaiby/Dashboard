@@ -12,7 +12,7 @@
                   <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
                 </div>
 
-                <form #loginForm="ngForm" (ngsubmit)="onSubmit()">
+                <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
                   <p>Please login to your account</p>
 
                   <div class="form-outline mb-4">
@@ -28,7 +28,7 @@
                   </div>
 
                   <div class="text-center pt-1 mb-5 pb-1">
-                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button"
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit"
                       [disabled]="!loginForm.valid">
                       Log in
                     </button>
