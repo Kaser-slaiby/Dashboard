@@ -6,7 +6,7 @@ import { AdminLayoutRoutes } from './admin-layout.routing';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 import { TableListComponent } from '../../table-list/table-list.component';
-import { CustomersComponent } from '../../management/customers.component';
+// import { CustomersComponent } from '../../management/customers.component';
 import { IconsComponent } from '../../icons/icons.component';
 import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
@@ -35,7 +35,7 @@ import { MatLegacySelectModule as MatSelectModule } from '@angular/material/lega
     DashboardComponent,
     UserProfileComponent,
     TableListComponent,
-    CustomersComponent,
+    // CustomersComponent,
     IconsComponent,
     MapsComponent,
     NotificationsComponent,

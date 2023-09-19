@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'service/data.service';
 
 @Component({
   selector: 'app-icons',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./icons.component.css']
 })
 export class IconsComponent implements OnInit {
+  users: any;
+  constructor(private dataService: DataService) { }
 
-  constructor() { }
+
 
   ngOnInit() {
   }
 
+  getCustomersData() {
+    this.dataService.getCustomerList().subscribe(res => {
+      console.log(res)
+    })
+  }
 }
