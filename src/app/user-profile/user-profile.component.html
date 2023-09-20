@@ -1,57 +1,57 @@
 <div class="main-content">
-  <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card card-plain">
-              <div class="card-header card-header-danger">
-                  <h4 class="card-title mt-0"> Users List</h4>
-                  <p class="card-category"> Here is a subtitle for this table</p>
-              </div>
-              <div class="card-body" >
-                  <div class="table-responsive">
-                      <table class="table table-hover">
-                          <thead class="">
-                              <th>
-                                  ID
-                              </th>
-                              <th>
-                                  Name
-                              </th>
-                              <th>
-                                  Email
-                              </th>
-                              <th>
-                                  City
-                              </th>
-                              <th>
-                                  Salary
-                              </th>
-                          </thead>
-                          <tbody>
-                              <tr *ngFor="let item of users">
-                                  <td>
-                                      {{ item.id }}
-                                  </td>
-                                  <td>
-                                    {{ item.name }}
-                                  </td>
-                                  <td>
-                                      {{ item.email}}
-                                  </td>
-                                  <td>
-                                      {{ item.address.city}}
-                                  </td>
-                                  <td>
-                                      {{ item.address.zipcode }}
-                                  </td>
-                              </tr>
-                         
-                          </tbody>
-                      </table>
-                  </div>
-              </div>
-          </div>
-      </div>
-      </div>
-  </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-plain">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title mt-0"> Users List</h4>
+                        <p class="card-category"> Here is a subtitle for this table</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class="">
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Email
+                                    </th>
+                                    <th>
+                                        Mobile
+                                    </th>
+                                    <th>
+                                        Role
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of users">
+                                        <td>
+                                            {{ item.id }}
+                                        </td>
+                                        <td>
+                                            {{ item.name }}
+                                        </td>
+                                        <td>
+                                            {{ item.email}}
+                                        </td>
+                                        <td>
+                                            {{ item.mobile}}
+                                        </td>
+                                        <td>
+                                            {{ item.role }}
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

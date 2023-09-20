@@ -8,12 +8,12 @@ export class DataService {
 
   constructor(private httpClient: HttpClient) { }
   getData() {
-    return this.httpClient.get('https://jsonplaceholder.typicode.com/users');
+    return this.httpClient.get('cp/user/list');
 
   }
 
   getCustomerList() {
-    return this.httpClient.get('http://kaser.sy/api/customer.list')
+    return this.httpClient.get('cp/user/list')
   }
 
   // getLogin() {

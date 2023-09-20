@@ -38,8 +38,8 @@ export class LoginComponent {
 
   onSubmit() {
     this.Auth.login(this.form).subscribe(
-      // data => this.handleResponse(data)
-      data => console.log(data),
+      data => this.handleResponse(data)
+      // data => console.log(data),
       // error => this.handleError(error)
     )
   }

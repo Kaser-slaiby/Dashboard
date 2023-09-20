@@ -18,6 +18,7 @@ export class UserProfileComponent implements OnInit {
   getUsersData() {
     this.dataService.getData().subscribe(res => {
       this.users = res;
+      // console.log(res)
     })
 
   }
