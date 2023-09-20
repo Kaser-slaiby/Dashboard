@@ -9,7 +9,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
   login(data) {
-    return this.http.post('http://kaser.sy/api/login', data)
+    return this.http.post('/login', data)
   }
 }
 
