@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { LayoutsModule } from './components/layouts/layouts.module';
 
 
 
 @NgModule({
   declarations: [
-    NavbarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    LayoutsModule
   ],
   exports: [
-    NavbarComponent
   ]
 })
 export class SharedModule { }
