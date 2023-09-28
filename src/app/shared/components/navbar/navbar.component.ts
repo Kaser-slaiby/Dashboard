@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarComponent implements OnInit {
-
+  items = ['One', 'Tow', 'Three'];
+  activeItem: number;
   constructor() { }
 
   ngOnInit(): void {
