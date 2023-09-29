@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './guards/login/login.component';
+import { RouterOutlet } from '@angular/router';
+import { CoreRoutingModule } from './core-routing.module';
 
 
 
@@ -9,7 +11,9 @@ import { LoginComponent } from './guards/login/login.component';
     LoginComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CoreRoutingModule,
+    RouterOutlet
   ]
 })
 export class CoreModule { }
