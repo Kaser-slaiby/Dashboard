@@ -8,10 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { PrivateModule } from './private/private.module';
+import { AdminLayoutComponent } from './shared/components/layouts/admin-layout/admin-layout.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AdminLayoutComponent
   ],
   imports: [
     NgbAlertModule,
@@ -21,7 +23,7 @@ import { PrivateModule } from './private/private.module';
     NgbModule,
     SharedModule,
     CoreModule,
-    PrivateModule
+    PrivateModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
