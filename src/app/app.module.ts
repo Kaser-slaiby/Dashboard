@@ -10,6 +10,8 @@ import { CoreModule } from './core/core.module';
 import { PrivateModule } from './private/private.module';
 import { AdminLayoutComponent } from './shared/components/layouts/admin-layout/admin-layout.component';
 import { ComponentsModule } from './shared/components/components.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,11 @@ import { ComponentsModule } from './shared/components/components.module';
   ],
   imports: [
     NgbAlertModule,
+    FormsModule,
     BrowserModule,
+    ReactiveFormsModule,
+    RouterModule,
+    AppRoutingModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
