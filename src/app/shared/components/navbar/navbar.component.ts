@@ -1,18 +1,10 @@
-import { ChangeDetectionStrategy } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
-  items = ['One', 'Tow', 'Three'];
-  activeItem: number;
-  constructor() { }
+export class NavbarComponent {
 
-  ngOnInit(): void {
-
-  }
 }

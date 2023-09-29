@@ -14,7 +14,7 @@ import { ComponentsModule } from './shared/components/components.module';
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
   ],
   imports: [
     NgbAlertModule,

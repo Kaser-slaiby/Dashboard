@@ -4,6 +4,7 @@ import { UserLayoutComponent } from './user-layout/user-layout.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { BlankLayoutComponent } from './blank-layout/blank-layout.component';
 import { RouterOutlet } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -12,6 +13,7 @@ import { RouterOutlet } from '@angular/router';
     UserLayoutComponent,
     AuthLayoutComponent,
     BlankLayoutComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,
