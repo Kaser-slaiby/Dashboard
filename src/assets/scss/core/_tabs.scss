@@ -45,39 +45,5 @@
 }
 
 
-.nav-tabs {
-  .nav-link {
-    border-bottom: $bmd-nav-tabs-border-size solid transparent;
-  }
-
-  // colors
-  @include bmd-tabs-color($bmd-nav-tabs-color, $bmd-nav-tabs-active-color, $bmd-nav-tabs-active-border-color, $bmd-nav-tabs-disabled-link-color, $bmd-nav-tabs-disabled-link-color-hover);
-
-  &.header-primary {
-    @include bmd-tabs-color($bmd-nav-tabs-primary-color, $bmd-nav-tabs-primary-active-color, $bmd-nav-tabs-primary-active-border-color, $bmd-nav-tabs-primary-disabled-link-color, $bmd-nav-tabs-primary-disabled-link-color-hover);
-  }
-
-  &.bg-inverse {
-    @include bmd-tabs-color($bmd-nav-tabs-inverse-color, $bmd-nav-tabs-inverse-active-color, $bmd-nav-tabs-inverse-active-border-color, $bmd-nav-tabs-inverse-disabled-link-color, $bmd-nav-tabs-inverse-disabled-link-color-hover);
-  }
-}
 
 
-
-.card-nav-tabs{
-    margin-top: 45px;
-
-    .card-header{
-        margin-top: -30px !important;
-    }
-}
-
-.tab-content .tab-pane .td-actions{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.card .tab-content .form-check{
-  margin-top: 6px;
-}
