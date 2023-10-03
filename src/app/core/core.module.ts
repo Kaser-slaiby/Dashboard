@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './guards/login/login.component';
+import { LoginComponent } from './guards/components/login/login.component';
 import { RouterOutlet } from '@angular/router';
 import { CoreRoutingModule } from './core-routing.module';
 
