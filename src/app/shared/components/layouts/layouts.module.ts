@@ -20,7 +20,7 @@ import { RouterOutlet } from '@angular/router';
     RouterOutlet,
   ],
   exports: [
-    
+
   ]
 })
 export class LayoutsModule { }
