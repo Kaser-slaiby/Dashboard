@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
+  name:any;
+  email: any;
+  password:any
 
 }
