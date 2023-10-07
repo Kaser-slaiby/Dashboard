@@ -4,6 +4,7 @@ import { LoginComponent } from './guards/components/login/login.component';
 import { RouterOutlet } from '@angular/router';
 import { CoreRoutingModule } from './core-routing.module';
 import { RegisterComponent } from './guards/components/register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,9 @@ import { RegisterComponent } from './guards/components/register/register.compone
   imports: [
     CommonModule,
     CoreRoutingModule,
-    RouterOutlet
+    RouterOutlet,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class CoreModule { }

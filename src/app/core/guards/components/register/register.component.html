@@ -12,16 +12,27 @@
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
-              <form>
+              <form (ngSubmit)="submit()" [formGroup]="form">
                 <div class="form-outline mb-4">
                   <input
                     type="text"
+                    formControlName="name"
                     id="form3Example1cg"
                     class="form-control form-control-lg"
+                    name="name"
+                    [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"
                   />
-                  <label class="form-label" for="form3Example1cg"
-                    >Your Name</label
+                  <div
+                    *ngIf="submitted && f['name'].errors"
+                    class="invalid-feedback"
                   >
+                    <div *ngIf="f['name'].errors['requird']">
+                      Name is r
+                      <label class="form-label" for="form3Example1cg"
+                        >Your Name</label
+                      >
+                    </div>
+                  </div>
                 </div>
 
                 <div class="form-outline mb-4">
