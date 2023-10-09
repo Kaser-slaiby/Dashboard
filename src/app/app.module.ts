@@ -13,6 +13,7 @@ import { ComponentsModule } from './shared/components/components.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
     CoreModule,
     PrivateModule,
     ComponentsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot(), // ToastrModule added
+
   ],
   providers: [],
   bootstrap: [AppComponent]

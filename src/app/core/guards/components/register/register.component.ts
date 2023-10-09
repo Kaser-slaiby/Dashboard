@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 
 import { FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
+import { LoginService } from 'src/app/core/services/login/login.service';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-register',
@@ -13,8 +16,9 @@ export class RegisterComponent {
   name:any;
   email: any;
   password:any;
+  data: any
   
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private loginService: LoginService, private tostar: ToastrService) {}
 
   createForm() {
     this.form = this.formBuilder.group({
@@ -38,6 +42,11 @@ export class RegisterComponent {
     if (this.form.invalid){
       return  
     }
+    this.loginService.registerUser(this.form.value).subscribe(res => {
+      this.data = res;
+      console.log(res)
+    })
+
   }
 
 }
