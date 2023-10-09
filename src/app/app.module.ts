@@ -12,6 +12,7 @@ import { AdminLayoutComponent } from './shared/components/layouts/admin-layout/a
 import { ComponentsModule } from './shared/components/components.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { RouterModule } from '@angular/router';
     SharedModule,
     CoreModule,
     PrivateModule,
-    ComponentsModule
+    ComponentsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

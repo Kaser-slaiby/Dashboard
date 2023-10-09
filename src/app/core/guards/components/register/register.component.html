@@ -22,16 +22,14 @@
                     name="name"
                     [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"
                   />
+                  <label class="form-label" for="form3Example1cg"
+                    >Your Name</label
+                  >
                   <div
                     *ngIf="submitted && f['name'].errors"
                     class="invalid-feedback"
                   >
-                    <div *ngIf="f['name'].errors['requird']">
-                      Name is r
-                      <label class="form-label" for="form3Example1cg"
-                        >Your Name</label
-                      >
-                    </div>
+                    <div *ngIf="f['name'].errors['requird']">Name is r</div>
                   </div>
                 </div>
 
