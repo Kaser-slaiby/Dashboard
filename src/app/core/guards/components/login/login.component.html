@@ -1,9 +1,6 @@
-<section
-  class="vh-100 bg-image"
-  style="
+<section class="vh-100 bg-image" style="
     background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');
-  "
->
+  ">
   <div class="mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -12,36 +9,31 @@
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
-              <form>
-                <div class="form-outline mb-4">
-                  <input
-                    type="email"
-                    id="form3Example3cg"
-                    class="form-control form-control-lg"
-                  />
-                  <label class="form-label" for="form3Example3cg"
-                    >Your Email</label
-                  >
-                </div>
+              <form (ngSubmit)="submit()" [formGroup]="form">
 
                 <div class="form-outline mb-4">
-                  <input
-                    type="password"
-                    id="form3Example4cg"
-                    class="form-control form-control-lg"
-                  />
-                  <label class="form-label" for="form3Example4cg"
-                    >Password</label
-                  >
+                  <input type="email" formControlName="email" id="form3Example1cg" class="form-control form-control-lg"
+                    name="email" [ngClass]="{ 'is-invalid': submitted && f['name'].errors }" />
+                  <label class="form-label" for="form3Example1cg">Your Email</label>
+                  <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                    <div *ngIf="f['email'].errors['requird']">Email is r</div>
+                  </div>
                 </div>
+                <div class="form-outline mb-4">
+                  <input type="password" formControlName="password" id="form3Example1cg"
+                    class="form-control form-control-lg" name="password"
+                    [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+                  <label class="form-label" for="form3Example1cg">Your password</label>
+                  <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                    <div *ngIf="f['password'].errors['requird']">password is r</div>
+                  </div>
+                </div>
+
+
+
 
                 <div class="form-check d-flex justify-content-center mb-5">
-                  <input
-                    class="form-check-input me-2"
-                    type="checkbox"
-                    value=""
-                    id="form2Example3cg"
-                  />
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
                   <label class="form-check-label" for="form2Example3g">
                     I agree all statements in
                     <a href="#!" class="text-body"><u>Terms of service</u></a>
@@ -49,10 +41,7 @@
                 </div>
 
                 <div class="d-flex justify-content-center">
-                  <button
-                    type="button"
-                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
-                  >
+                  <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
                     Login
                   </button>
                 </div>
