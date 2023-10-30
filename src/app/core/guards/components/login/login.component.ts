@@ -1,48 +1,61 @@
 import { Component } from '@angular/core';
-
-import { ToastrService } from 'ngx-toastr';
-import { FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
-import { LoginService } from 'src/app/core/services/login/login.service';
-import { authGuard } from '../../auth/auth.guard';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from 'src/app/core/auth/auth.service';
+import { TokenService } from 'src/app/core/services/token/token.service';
+// import { Router } from 'express';
+// import { HttpClient } from '@angular/common/http';
+import { data } from 'jquery';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  providers: []
 })
 export class LoginComponent {
-  form!: FormGroup;
-  submitted = false;
-  data: any;
-  token: any
+  title = 'app Works!';
+  // person
 
-  constructor(private formBuilder: FormBuilder, private loginService: LoginService, private tostar: ToastrService) { }
-
-  loginForm() {
-    this.form = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-    });
-  }
-  ngOnInit(): void {
-    this.loginForm
-  }
-
-  get f() {
-    return this.form.controls
-  }
-
-
-  submit() {
-    this.submitted = true
-    if (this.form.invalid) {
-      return
-    }
-    this.loginService.login(this.form.value).subscribe(res => {
-      this.data = res;
-
-      console.log(res)
-    })
+  constructor(private Auth: AuthService,
+    private Token: TokenService,
+    private router: Router,
+    // http: HttpClient
+    // private route: ActivatedRoute
+  ) {
 
   }
+
+
+  // fetchDataFromServer() {
+  //   this.person =
+  //     this.http.get('/kaser.sy/login').map(res =>
+  //       res.json());
+  // }
+
+  public error = null
+
+
+
+  onSubmit() {
+    this.Auth.login(this.form).subscribe(
+      data => this.handleResponse(data)
+      // data => console.log(data),
+      // error => this.handleError(error)
+    )
+  }
+
+  handleResponse(data: any) {
+    this.router.navigateByUrl('dashboard');
+    this.Token.handle(data.access_token)
+  }
+
+  handleError() {
+    // this.error = this.error.error
+  }
+
+  public form = {
+    email: null,
+    password: null
+  }
+
 }
