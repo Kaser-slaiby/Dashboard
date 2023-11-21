@@ -16,8 +16,8 @@ export class CustomersComponent {
   }
   getcustomersData() {
     this.customersservice.getData().subscribe(res => {
-      // this.customers = res;
-      console.log(res)
+      this.customers = res;
+      // console.log(res)
     })
 
   }
