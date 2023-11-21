@@ -7,23 +7,23 @@ import { SharedModule } from '../shared/shared.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ComponentsModule } from "../shared/components/components.module";
 import { UsersComponent } from './components/users/users.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
     declarations: [
         PublicComponent,
         DashboardComponent,
-        UsersComponent
     ],
     exports: [
         DashboardComponent,
-        UsersComponent
     ],
     imports: [
         CommonModule,
         PublicRoutingModule,
         SharedModule,
-        ComponentsModule
+        ComponentsModule,
+        BrowserModule
     ]
 })
 export class PublicModule { }

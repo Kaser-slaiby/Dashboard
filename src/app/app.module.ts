@@ -14,14 +14,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { CommonModule } from '@angular/common';
+import { UsersComponent } from './public/components/users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+    UsersComponent
+
   ],
   imports: [
     NgbAlertModule,
+    CommonModule,
     FormsModule,
     BrowserModule,
     ReactiveFormsModule,

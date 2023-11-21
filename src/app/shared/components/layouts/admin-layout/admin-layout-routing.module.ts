@@ -5,8 +5,8 @@ import { UsersComponent } from 'src/app/public/components/users/users.component'
 
 
 export const AdminLayoutRoutes: Routes = [
-    { path: 'dashboard',      component: DashboardComponent },
-    { path: 'users',   component: UsersComponent },
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'users', component: UsersComponent },
     // { path: 'table-list',     component: TableListComponent },
     // { path: 'typography',     component: TypographyComponent },
     // { path: 'icons',          component: IconsComponent },

@@ -5,6 +5,7 @@ import { RouterOutlet } from '@angular/router';
 import { CoreRoutingModule } from './core-routing.module';
 import { RegisterComponent } from './guards/components/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -18,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CoreRoutingModule,
     RouterOutlet,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserModule
   ]
 })
 export class CoreModule { }
