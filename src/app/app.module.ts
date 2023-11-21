@@ -16,12 +16,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { UsersComponent } from './public/components/users/users.component';
+import { CustomersComponent } from './public/components/customers/customers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    UsersComponent
+    UsersComponent,
+    CustomersComponent
 
   ],
   imports: [

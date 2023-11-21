@@ -19,6 +19,7 @@ import { CustomersComponent } from './components/customers/customers.component';
     ],
     exports: [
         DashboardComponent,
+        CustomersComponent
     ],
     imports: [
         CommonModule,
