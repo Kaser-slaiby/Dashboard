@@ -4,11 +4,11 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class CustomersService {
 
   constructor(private httpClient: HttpClient) { }
   getData() {
-    return this.httpClient.get('cp/user/list');
+    return this.httpClient.get('cp/city/customer/list');
 
   }
 
@@ -16,8 +16,4 @@ export class UserService {
   //   return this.httpClient.get('cp/user/list')
   // }
 
-  // getLogin() {
-  //   return this.httpClient.get('');
-
-  // }
 }

@@ -14,12 +14,10 @@ import { CustomersComponent } from './components/customers/customers.component';
 @NgModule({
     declarations: [
         PublicComponent,
-        DashboardComponent,
-        CustomersComponent,
+        DashboardComponent
     ],
     exports: [
         DashboardComponent,
-        CustomersComponent
     ],
     imports: [
         CommonModule,
