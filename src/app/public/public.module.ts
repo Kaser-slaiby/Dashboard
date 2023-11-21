@@ -8,12 +8,14 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ComponentsModule } from "../shared/components/components.module";
 import { UsersComponent } from './components/users/users.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { CustomersComponent } from './components/customers/customers.component';
 
 
 @NgModule({
     declarations: [
         PublicComponent,
         DashboardComponent,
+        CustomersComponent,
     ],
     exports: [
         DashboardComponent,
