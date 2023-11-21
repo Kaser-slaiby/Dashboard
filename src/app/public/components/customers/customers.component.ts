@@ -8,7 +8,7 @@ import { CustomersService } from '../../../core/services/customers/customers.ser
 })
 export class CustomersComponent {
 
-  users: any;
+  customers: any;
   constructor(private customersservice: CustomersService) { }
 
   ngOnInit() {
@@ -16,8 +16,8 @@ export class CustomersComponent {
   }
   getcustomersData() {
     this.customersservice.getData().subscribe(res => {
-      this.users = res;
-      // console.log(res)
+      // this.customers = res;
+      console.log(res)
     })
 
   }
